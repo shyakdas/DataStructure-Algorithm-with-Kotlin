@@ -35,11 +35,13 @@ fun binarySearch(array: Array<Int>, searchElement: Int): Int {
         // Check if search element is greater than of array[mid] or not
         else if (searchElement > array[mid]) {
             // Update the start
+            // Go to Right
             start = mid + 1
         }
         // Check if search element is lower than or array[mid] or not
         else if (searchElement < array[mid]) {
             // Update the end
+            // Go to Left
             end = mid - 1
         }
     }

@@ -36,15 +36,20 @@ fun findTheFirstOccurrenceOfANumber(array: Array<Int>, searchElement: Int): Int 
         val mid = start + (end - start) / 2
         // Check if the array[mid] element is the equal to search element or not
         if (array[mid] == searchElement) {
+            // Save the position
             position = mid
+            // if any occurrence is there, then it should be at the left side
+            // To go to left side we need to change the end
             end = mid - 1
         }
         // Check if search element is greater than of array[mid] or not
         else if (searchElement > array[mid]) {
+            // Update the Start, as we need to go Right
             start = mid + 1
         }
         // Check if search element is lower than or array[mid] or not
         else if (searchElement < array[mid]) {
+            // Update the End, as we need to go Left
             end = mid - 1
         }
     }
