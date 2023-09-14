@@ -2,7 +2,7 @@ package search
 
 fun main() {
     val sortedArray = arrayOf(10, 20, 30, 40, 50, 60, 70, 80)
-    val result = binarySearch(array = sortedArray, searchElement = 100)
+    val result = binarySearch(array = sortedArray, searchElement = 80)
     if (result == -1) {
         println("Element not found")
     } else {
