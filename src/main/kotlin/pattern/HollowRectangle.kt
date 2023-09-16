@@ -17,8 +17,11 @@ fun main() {
  *   else only first and end *
  */
 fun hollowRectangle(numberOfRows: Int, numberOfColumn: Int) {
+    // Row
     for (i in 0 until numberOfRows) {
+        // Column
         for (j in 0 until numberOfColumn) {
+            // For first row and last row or first column or last column we need to print *
             if (i == 0 || i == numberOfRows - 1 || j == 0 || j == numberOfColumn - 1){
                 print("* ")
             }else{
