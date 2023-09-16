@@ -24,20 +24,27 @@ fun findMissingElementInASortedArray(array: Array<Int>): Int {
     // Store the answer
     var ans = -1
 
+    // Loop until start > end
     while (start <= end) {
+        // Find the Mid value
         val mid = start + (end - start) / 2
+        // Check difference of mid element and index of the array
         val diff = array[mid] - mid
         if (diff == 1) {
             // Move to Right Side
             start = mid + 1
         } else {
+            // Store the answer
             ans = mid
+            // Move Left
             end = mid - 1
         }
     }
-
+    // For the last index, if ans is coming as 0
+    // We need to return the arraySize + 1 value as a missing elemenet
     if (ans + 1 == 0) {
         return n + 1
     }
+    // Return
     return ans + 1
 }
